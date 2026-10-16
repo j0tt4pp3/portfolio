@@ -5,17 +5,17 @@
     --bg-secundario: #ffffff;
 
     --bg-button-primario: #0071E3;
-    --bg-button-primario: transparent;
+    --bg-button-secundario: transparent;
 
     --bg-overlay: #00000087;
 
     --borda-button: 1px solid #0071E3;
 
     --cor-texto-button-primario: #ffffff;
-    --cor-texto-button-primario: #0071E3;
+    --cor-texto-button-secundario: #0071E3;
 
-    --cor-texto-paragrafo: #868686;
-    --cor-texto-titulo: #1c1c1c;
+    --cor-texto-primario: #868686;
+    --cor-texto-secundario: #1c1c1c;
 
     --cor-gradient: linear-gradient(135deg, cyan, violet);
 }
@@ -38,6 +38,14 @@ body {
     font-family: var(--fonte-primaria);
 }
 
+h2 {
+    color: var(--cor-texto-secundario);
+}
+
+p {
+    color: var(--cor-texto-primario);
+}
+
 header,
 header ul {
     display: flex;
@@ -46,14 +54,14 @@ header ul {
 }
 
 header {
-    padding: 1.5rem;
+    padding: .5rem 1rem;
     background-color: var(--bg-secundario);
     position: sticky;
     top: 0;
 }
 
 header h1 a {
-    color: var(--cor-texto-titulo);
+    color: var(--cor-texto-secundario);
     font-size: 1.5rem;
 }
 
@@ -63,7 +71,7 @@ header ul {
 
 header ul li a {
     font-size: 1.125rem;
-    color: var(--cor-texto-paragrafo);
+    color: var(--cor-texto-primario);
     font-weight: 500;
 }
 
@@ -80,11 +88,10 @@ header ul li a {
 
 .hero-section h2 {
     font-size: clamp(3rem, 5vw, 5rem);
-    color: var(--cor-texto-titulo);
     margin-bottom: 1rem;
 }
 
-.hero-section h2 span {
+h2 span {
     background-image: var(--cor-gradient);
     background-clip: text;
     -webkit-background-clip: text;
@@ -92,13 +99,121 @@ header ul li a {
 }
 
 .hero-section p {
-    color: var(--cor-texto-paragrafo);
+    color: var(--cor-texto-primario);
     line-height: 1.5;
     font-size: clamp(1.125rem, 3vw, 1.5rem);
 }
 
+.hero-section ul {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 37.5rem;
 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-img {
-    max-width: 100%;
+.hero-section a {
+    height: 3rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3rem;
+}
+
+.hero-section ul li:first-child a {
+    background-color: var(--bg-button-primario);
+    color: var(--cor-texto-button-primario);
+}
+
+.hero-section ul li:last-child a {
+    background-color: var(--bg-button-secundario);
+    border: var(--borda-button);
+    color: var(--cor-texto-button-secundario)
+}
+
+.about-section {
+    background-color: var(--bg-secundario);
+}
+
+.about-section,
+.projetos-section {
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.about-section h2,
+.projetos-section h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+}
+
+.about-section p,
+.projetos-section p {
+    margin-bottom: 1rem;
+    font-size: clamp(1.125rem, 3vw, 1.25rem);
+    line-height: 1.5;
+}
+
+.about-section img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.projetos-section li {
+    margin-bottom: 1rem;
+
+    border-radius: 2rem;
+    height: 25rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.projetos-section li:first-child {
+    background-image: url("/images/cachorro-1.jpg");
+}
+
+.projetos-section li:nth-child(2) {
+    background-image: url("/images/cachorro-2.jpg");
+}
+
+.projetos-section li:nth-child(3) {
+    background-image: url("/images/cachorro-3.jpg");
+}
+
+.projetos-section article {
+    background-color: var(--bg-overlay);
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: end;
+}
+
+.projetos-section article h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.projetos-section article p {
+    color: #ffffffde;
+}
+
+.projetos-section article a {
+    background-color: var(--bg-button-primario);
+    color: var(--cor-texto-button-primario);
+    height: 3rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1.5rem;
 }
