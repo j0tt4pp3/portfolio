@@ -114,7 +114,8 @@ h2 span {
     gap: 1rem;
 }
 
-.hero-section a {
+.hero-section a,
+form button {
     height: 3rem;
     width: 100%;
 
@@ -125,7 +126,8 @@ h2 span {
     border-radius: 3rem;
 }
 
-.hero-section ul li:first-child a {
+.hero-section ul li:first-child a,
+form button {
     background-color: var(--bg-button-primario);
     color: var(--cor-texto-button-primario);
 }
@@ -219,4 +221,63 @@ h2 span {
     justify-content: center;
 
     border-radius: 1.5rem;
+}
+
+.contato-section form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--bg-secundario);
+    padding: .875rem 1rem;
+    border-radius: 1.5rem;
+    font-family: var(--fonte-primaria);
+}
+
+form input,
+form textarea {
+    margin-bottom: 1rem;
+    margin-top: .25rem;
+    background-color: var(--bg-primario);
+}
+
+form textarea {
+    height: 20rem;
+}
+
+form input {
+    height: 3rem;
+}
+
+form label {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+}
+
+form input,
+form textarea,
+form button {
+    border-radius: 1.25rem;
+    border: none;
+    padding: .625rem 1rem;
+    font-size: 1rem;
+}
+
+footer {
+    padding: 1rem;
+    background-color: var(--bg-secundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+footer ul,
+footer a {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    flex-direction: row-reverse;
+    color: var(--cor-texto-primario);
 }
