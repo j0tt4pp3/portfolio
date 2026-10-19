@@ -141,19 +141,22 @@ h2 span {
 }
 
 .about-section,
-.projetos-section {
+.projetos-section,
+.contato-section {
     padding: 6rem 1rem;
     text-align: center;
 }
 
 .about-section h2,
-.projetos-section h2 {
+.projetos-section h2,
+.contato-section h2 {
     margin-bottom: 1rem;
     font-size: clamp(2.5rem, 5vw, 3rem);
 }
 
 .about-section p,
-.projetos-section p {
+.projetos-section p,
+.contato-section p {
     margin-bottom: 1rem;
     font-size: clamp(1.125rem, 3vw, 1.25rem);
     line-height: 1.5;
