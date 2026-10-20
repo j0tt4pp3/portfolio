@@ -90,13 +90,20 @@ header ul li a {
     font-size: clamp(3rem, 5vw, 5rem);
     margin-bottom: 1rem;
     max-width: 20ch;
+    animation: fade-in 1s ease-out both;
 }
 
 h2 span {
     background-image: var(--cor-gradient);
+    background-size: 300% 300%;
+    background-position: 0% 50%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+
+    animation-name: gradiente-animacao;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .hero-section p {
@@ -104,6 +111,8 @@ h2 span {
     line-height: 1.5;
     font-size: clamp(1.125rem, 3vw, 1.5rem);
     max-width: 38ch;
+    animation: fade-in 1s ease-out both;
+    animation-delay: 200ms;
 }
 
 .hero-section ul {
@@ -114,6 +123,8 @@ h2 span {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: fade-in 1s ease-out both;
+    animation-delay: 400ms;
 }
 
 .hero-section a,
@@ -306,6 +317,8 @@ footer a {
     color: var(--cor-texto-primario);
 }
 
+
+
 @media screen and (min-width:48rem) {
     body {
         /*background-color: #212a44;*/
@@ -350,5 +363,31 @@ footer a {
 
     .contato-section div p {
         margin: 1rem 0;
+    }
+}
+
+@keyframes gradiente-animacao {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
