@@ -4,20 +4,24 @@
     --bg-primario: #f5f5f7;
     --bg-secundario: #ffffff;
 
-    --bg-button-primario: #0071E3;
+    --bg-button-primario: #6457C6;
     --bg-button-secundario: transparent;
 
     --bg-overlay: #00000087;
 
-    --borda-button: 1px solid #0071E3;
+    --borda-button: 1px solid #6457C6;
 
     --cor-texto-button-primario: #ffffff;
-    --cor-texto-button-secundario: #0071E3;
+    --cor-texto-button-secundario: #6457C6;
 
     --cor-texto-primario: #868686;
     --cor-texto-secundario: #1c1c1c;
 
-    --cor-gradient: linear-gradient(135deg, cyan, violet);
+    --cor-gradient: linear-gradient(135deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
+
+    --bg-button-primario-hover: #65379B;
+    --cor-foco: #6457C6;
+    --cor-borda: #d2d2d7;
 }
 
 * {
