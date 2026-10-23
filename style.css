@@ -161,16 +161,24 @@ form button {
 }
 
 .hero-section ul li:first-child a:hover,
+.hero-section ul li:first-child a:focus-visible,
 form button:hover,
-.projetos-section article a:hover {
+form button:focus-visible,
+.projetos-section article a:hover,
+.projetos-section article a:focus-visible {
     background-color: var(--bg-button-primario-hover);
 }
 
 .hero-section ul li a:hover,
+.hero-section ul li a:focus-visible,
 .projetos-section article a:hover,
+.projetos-section article a:focus-visible,
 header h1 a:hover,
+header h1 a:focus-visible,
 header ul li a:hover,
-footer a:hover {
+header ul li a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
     transform: scale(1.04);
 }
 
@@ -190,7 +198,8 @@ form button {
     color: var(--cor-texto-button-secundario)
 }
 
-.hero-section ul li:last-child a:hover {
+.hero-section ul li:last-child a:hover,
+.hero-section ul li:last-child a:focus-visible {
     background-color: var(--cor-texto-button-secundario);
     color: var(--cor-texto-button-primario);
 }
@@ -204,6 +213,11 @@ form button {
 .contato-section {
     padding: 6rem 1rem;
     text-align: center;
+}
+
+.projetos-section li:hover,
+.projetos-section li:focus-within {
+    transform: translateY(-6px);
 }
 
 .about-section h2,
@@ -240,7 +254,7 @@ form button {
 
 .projetos-section li {
     margin-bottom: 1rem;
-
+    transition: transform .25s ease;
     border-radius: 2rem;
     height: 25rem;
     overflow: hidden;
@@ -317,6 +331,7 @@ form textarea {
 
 form textarea {
     height: 20rem;
+    resize: vertical;
 }
 
 form input {
@@ -336,6 +351,11 @@ form button {
     padding: .625rem 1rem;
     font-size: 1rem;
     font-family: var(--fonte-primaria);
+}
+
+form input:hover,
+form textarea:hover {
+    box-shadow: 0 0 0 2px var(--cor-borda);
 }
 
 footer {
@@ -359,7 +379,9 @@ footer a {
 }
 
 header ul li a:hover,
-footer a:hover {
+header ul li a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
     color: var(--cor-texto-secundario);
 }
 
