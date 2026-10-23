@@ -42,6 +42,21 @@ body {
     font-family: var(--fonte-primaria);
 }
 
+a,
+button,
+input,
+textarea {
+    transition: background-color .25s ease, color .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
 h2 {
     color: var(--cor-texto-secundario);
 }
@@ -65,6 +80,7 @@ header {
 }
 
 header h1 a {
+    display: inline-block;
     color: var(--cor-texto-secundario);
     font-size: 1.5rem;
 }
@@ -74,6 +90,7 @@ header ul {
 }
 
 header ul li a {
+    display: inline-block;
     font-size: 1.125rem;
     color: var(--cor-texto-primario);
     font-weight: 500;
@@ -143,6 +160,20 @@ form button {
     border-radius: 3rem;
 }
 
+.hero-section ul li:first-child a:hover,
+form button:hover,
+.projetos-section article a:hover {
+    background-color: var(--bg-button-primario-hover);
+}
+
+.hero-section ul li a:hover,
+.projetos-section article a:hover,
+header h1 a:hover,
+header ul li a:hover,
+footer a:hover {
+    transform: scale(1.04);
+}
+
 .hero-section ul li:first-child a,
 form button {
     background-color: var(--bg-button-primario);
@@ -157,6 +188,11 @@ form button {
     background-color: var(--bg-button-secundario);
     border: var(--borda-button);
     color: var(--cor-texto-button-secundario)
+}
+
+.hero-section ul li:last-child a:hover {
+    background-color: var(--cor-texto-button-secundario);
+    color: var(--cor-texto-button-primario);
 }
 
 .about-section {
@@ -322,6 +358,10 @@ footer a {
     color: var(--cor-texto-primario);
 }
 
+header ul li a:hover,
+footer a:hover {
+    color: var(--cor-texto-secundario);
+}
 
 
 @media screen and (min-width:48rem) {
