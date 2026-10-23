@@ -209,15 +209,15 @@ form button {
 }
 
 .projetos-section li:first-child {
-    background-image: url("/images/cachorro-1.jpg");
+    background-image: url("images/cachorro-1.jpg");
 }
 
 .projetos-section li:nth-child(2) {
-    background-image: url("/images/cachorro-2.jpg");
+    background-image: url("images/cachorro-2.jpg");
 }
 
 .projetos-section li:nth-child(3) {
-    background-image: url("/images/cachorro-3.jpg");
+    background-image: url("images/cachorro-3.jpg");
 }
 
 .projetos-section article {
