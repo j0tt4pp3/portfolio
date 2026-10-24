@@ -80,9 +80,15 @@ header {
 }
 
 header h1 a {
-    display: inline-block;
-    color: var(--cor-texto-secundario);
-    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--bg-primario);
+    color: var(--cor-texto-primario);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 header ul {
@@ -91,6 +97,9 @@ header ul {
 
 header ul li a {
     display: inline-block;
+    padding: .375rem .75rem;
+    border-radius: 2rem;
+    background-color: var(--bg-primario);
     font-size: 1.125rem;
     color: var(--cor-texto-primario);
     font-weight: 500;
@@ -379,11 +388,21 @@ footer a {
     color: var(--cor-texto-primario);
 }
 
-header ul li a:hover,
-header ul li a:focus-visible,
 footer a:hover,
 footer a:focus-visible {
     color: var(--cor-texto-secundario);
+}
+
+header ul li a:hover,
+header ul li a:focus-visible {
+    background-color: var(--bg-button-primario);
+    color: var(--cor-texto-button-primario);
+}
+
+header h1 a:hover,
+header h1 a:focus-visible {
+    background-image: var(--cor-gradient);
+    color: #ffffff;
 }
 
 
