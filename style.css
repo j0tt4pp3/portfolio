@@ -251,6 +251,11 @@ form button {
     height: 30rem;
     object-fit: cover;
     border-radius: 1.5rem;
+    transition: transform .3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.04);
 }
 
 .projetos-section p {
