@@ -173,9 +173,7 @@ form button {
 .hero-section ul li:first-child a:hover,
 .hero-section ul li:first-child a:focus-visible,
 form button:hover,
-form button:focus-visible,
-.projetos-section article a:hover,
-.projetos-section article a:focus-visible {
+form button:focus-visible {
     background-color: var(--bg-button-primario-hover);
 }
 
@@ -209,9 +207,12 @@ form button {
 }
 
 .hero-section ul li:last-child a:hover,
-.hero-section ul li:last-child a:focus-visible {
+.hero-section ul li:last-child a:focus-visible,
+.projetos-section article a:hover,
+.projetos-section article a:focus-visible {
     background-color: var(--cor-texto-button-secundario);
     color: var(--cor-texto-button-primario);
+    border-color: var(--cor-texto-button-secundario);
 }
 
 .about-section {
