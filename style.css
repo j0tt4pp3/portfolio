@@ -253,10 +253,6 @@ form button {
     border-radius: 1.5rem;
 }
 
-.about-text {
-    text-align: left;
-}
-
 .projetos-section p {
     max-width: 50ch;
     margin-left: auto;
@@ -413,12 +409,7 @@ header h1 a:focus-visible {
 }
 
 
-@media screen and (min-width:48rem) {
-    body {
-        /*background-color: #212a44;*/
-    }
-
-
+@media screen and (min-width: 48rem) {
     .hero-section ul {
         flex-direction: row;
     }
@@ -427,10 +418,21 @@ header h1 a:focus-visible {
         width: 100%;
     }
 
+    .about-section,
+    .projetos-section,
+    .contato-section {
+        padding-inline: 2rem;
+    }
+
     .about-section {
         display: flex;
         gap: 2rem;
         align-items: center;
+    }
+
+    .about-text,
+    .about-section img {
+        flex: 1;
     }
 
     .projetos-section ul {
@@ -442,6 +444,12 @@ header h1 a:focus-visible {
 }
 
 @media screen and (min-width: 75rem) {
+    .about-section,
+    .projetos-section,
+    .contato-section {
+        padding-inline: 6rem;
+    }
+
     .projetos-section ul {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -449,14 +457,8 @@ header h1 a:focus-visible {
     .contato-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contato-section div {
-        text-align: left;
-    }
-
-    .contato-section div p {
-        margin: 1rem 0;
+        align-items: center;
+        gap: 3rem;
     }
 }
 
