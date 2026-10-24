@@ -81,6 +81,7 @@ header {
     backdrop-filter: blur(.75rem);
     -webkit-backdrop-filter: blur(.75rem);
 }
+
 header h1 a {
     display: grid;
     place-items: center;
@@ -293,6 +294,10 @@ form button {
     align-items: end;
 }
 
+.projetos-section article div {
+    width: 100%;
+}
+
 .projetos-section article h3 {
     font-size: 1.5rem;
     color: #ffffff;
@@ -303,8 +308,9 @@ form button {
 }
 
 .projetos-section article a {
-    background-color: var(--bg-button-primario);
-    color: var(--cor-texto-button-primario);
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     height: 3rem;
     width: 100%;
 
